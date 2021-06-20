@@ -19,8 +19,8 @@ public class Database extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table Notes(id TEXT primary key,title TEXT,content TEXT,date TEXT)");
-        db.execSQL("create table Todo(id TEXT primary key,title TEXT)");
+        db.execSQL("create table Notes(id integer primary key,title TEXT,content TEXT,date TEXT)");
+        db.execSQL("create table Todo(id integer primary key,title TEXT)");
     }
 
     @Override
@@ -34,7 +34,7 @@ public class Database extends SQLiteOpenHelper {
     public Boolean insertData(String title, String content){
         SQLiteDatabase database = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/mm/dd");
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd MMM yyyy");
 
         contentValues.put("title",title);
         contentValues.put("content",content);
@@ -51,6 +51,13 @@ public class Database extends SQLiteOpenHelper {
         contentValues.put("title",title);
         contentValues.put("date",dateFormat.format(new Date()));
         long result = database.insert("Todo",null,contentValues);
+        return result != -1;
+    }
+
+    // Deleting data
+    public Boolean delete(String title,String date,String des){
+        SQLiteDatabase database = this.getWritableDatabase();
+        long result = database.delete("Notes","title=? and date=? and content=?",new String[]{title,date,des});
         return result != -1;
     }
 

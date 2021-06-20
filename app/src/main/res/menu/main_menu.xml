@@ -3,11 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <group>
         <item
+            android:id="@+id/noteNavIcon"
             android:icon="@drawable/ic_baseline_note_24"
             android:title="Notes"
             app:showAsAction="always"
             />
         <item
+            android:id="@+id/todoNavIcon"
             android:icon="@drawable/ic_baseline_format_list_bulleted_24"
             android:title="To-Do"
             app:showAsAction="always"
