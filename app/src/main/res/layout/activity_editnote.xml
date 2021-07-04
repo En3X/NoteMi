@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Createnote"
+    tools:context=".Editnote"
     android:background="@color/bgl"
     >
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -40,7 +40,7 @@
             app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
 
         <TextView
-            android:id="@+id/createTitle"
+            android:id="@+id/editTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -49,7 +49,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginStart="20dp"
             android:fontFamily="@font/qs_bold"
-            android:text="Create Note"
+            android:text="Editing Note"
             android:textColor="@color/white"
             android:textSize="30sp"
             app:layout_constraintBottom_toBottomOf="parent"

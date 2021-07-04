@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
 public class Createnote extends AppCompatActivity {
@@ -28,7 +27,7 @@ public class Createnote extends AppCompatActivity {
                 finish();
             }
         });
-        findViewById(R.id.saveNoteBtn).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.createBtn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 title = layout.getEditText().getText().toString();

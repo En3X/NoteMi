@@ -3,4 +3,5 @@
     <string name="note_page_intro">All your notes in one place</string>
     <string name="dummy_note_text">A little description about note, or may be some text cut from the note.</string>
     <string name="dumy_note_title">Note Title</string>
+    <string name="TODO_TITLE">Manage your work with todo</string>
 </resources>
